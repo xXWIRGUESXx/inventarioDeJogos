@@ -61,6 +61,16 @@ Isso vai gerar o arquivo `resultados_teste.csv` com os dados dos testes.
 
 ---
 
+## Execução de TesteDesempenho com parâmetros
+
+Para rodar um teste grande (exemplo):
+
+```
+java -cp bin inventario.TesteDesempenho 10000 1000 LCG DIVISAO 42
+```
+
+---
+
 ## Análise dos resultados
 
 O arquivo CSV pode ser aberto no Excel ou Google Sheets pra analisar:
@@ -83,3 +93,17 @@ Os testes usam seeds fixas, então dá pra rodar várias vezes e obter os mesmos
 * Todas as estruturas (hash, heap, etc.) foram feitas do zero
 * O sistema é parametrizável por linha de comando
 * Dá pra expandir fácil com novos testes ou ajustes
+
+---
+
+## Descrição dos arquivos
+
+- **GeradorDeItens.java**: Gera itens aleatórios usando LCG ou XORShift.
+- **Item.java**: Representa um item do inventário.
+- **Main.java**: Menu principal e interação com o usuário.
+- **MaxHeap.java**: Implementação da heap máxima para raridade dos itens.
+- **Node.java**: Nó para listas encadeadas na tabela hash.
+- **Personagem.java**: Representa um personagem com inventário próprio.
+- **SistemaInventario.java**: Lógica do inventário, integra hash e heap.
+- **TabelaHash.java**: Implementação da tabela hash parametrizável.
+- **TesteDesempenho.java**: Executa testes automáticos e exporta métricas para CSV.
