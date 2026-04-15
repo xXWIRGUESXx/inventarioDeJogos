@@ -1,0 +1,2 @@
+Seed,Random,Hash,Tabela,Drops,Tempo_ms,Mem_KB,Insercoes,Buscas,Colisoes
+42,LCG,DIVISAO,1000,10000,756.89,1804.87,10000,0,9995
